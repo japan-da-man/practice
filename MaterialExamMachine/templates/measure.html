@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1100">
+    <title>Arduino-conect</title>
+    <link rel="stylesheet" href="./static/css/measure.css">
+  </head>
+  <body>
+    <ul class="sample">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <div class="message">
+      <h1 class="roll">	operation page</h1>
+      <h2 class="moji">welcome! {{ username }}</h2>
+      <hr size="4" color="green" noshade>
+        <img src ="{{ url_for ('video_feed')}}">
+        <img src="{{ url_for('plot_feed') }}">
+      <hr size="4" color="blue" nosahde>
+        <form action="/measure" method="post">
+          <input type="submit" name="stop_cy" value="stop" class="button">
+          <input type="submit" name="cycle" value="cycle"   class="button">
+          <input type="submit" name="reset" value="reset" class="button">
+          <ul class="button">
+            <div><a href="{{ url_for('logout') }}">LOGOUT</a></div>
+          </ul>
+        </form>
+    </div> 
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arduino + Flask Measurement</title>
+    <link rel="stylesheet" href="./static/css/index.css" >
+  </head>
+  <body>
+    <section class="showcase">
+      <video src="./static/movie/aa.mp4" autoplay muted loop></video>
+      <div class="text">
+       <h1 class="roll">Arduino + Flask Demonstration</h1>
+        <img src="{{ url_for('video_feed') }}">
+        <img src="{{ url_for('plot_data') }}">
+        <hr>
+        <form action="/" method="post">
+         <input type="submit" value="start" class="button">
+        </form>
+
+      </div>
+    </section>
+  </body>
+</html>

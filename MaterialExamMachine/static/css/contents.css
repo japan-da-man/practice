@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./static/css/welcome.css" >
+  <title>Welcome</title>
+</head>
+<body>
+  <section class="showcase">
+    <video src="https://player.vimeo.com/external/292228530.hd.mp4?s=05de6d1575f25161c680fe19ac75042cd3874c75&profile_id=174" autoplay muted loop></video>
+        <div class="form">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <h1 class="roll">Welcomeページ</h1>
+            <h2 class="moji">ようこそ！ {{ username }}さん</h2>
+            <p class="moji">このページはログインしないと表示されません</p>
+            <ul>
+               <li class="button"><a href="{{ url_for('contents') }}">コンテンツ</a></li>
+               <li class="button"><a href="{{ url_for('logout') }}">ログアウト</a></li>
+            </ul>
+        </form>
+  </section>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1100" />
+    <title>材料試験機：コンテンツ</title>
+    <link rel="stylesheet" href="./static/css/contens.css" />
+  </head>
+   <body>
+    <ul class="sample">
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+         <div class="message">
+           <h1 class="roll">コンテンツページ</h1>
+           <h2 class="moji">ようこそ！ {{ username }}さん</h2>
+           <hr size="4" color="red" noshade>
+           <img src ="{{ url_for ('video_feed')}}">
+           <img src ="{{ url_for ('plot_data')}}">
+           <hr size="4" color="blue" noshade>
+             <form action="/contents" method="post">
+               <input type="submit" value="Arduino" class="button">
+               <ul class="button">
+                  <div> <a href="{{ url_for('logout') }}">ログアウト</a></div>
+               </ul>
+             </form>
+         </div>
+     </ul>
+   </body>
+</html>
