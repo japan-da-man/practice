@@ -41,7 +41,6 @@ class Arduino(threading.Thread):
         df.to_csv(self.datafile)
 
     def cycle(self):
-        print('cycle')
         with self.lock1:
             self.ser.write(b"1")
 
@@ -52,6 +51,10 @@ class Arduino(threading.Thread):
     def stop_cy(self):
         with self.lock1:
             self.ser.write(b"3")
+
+    def rapid(self):
+        with self.lock1:
+            self.ser.write(b"4")
 
     def get_frame(self):
         with self.lock2:
