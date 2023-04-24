@@ -1,4 +1,4 @@
-.logo span {
+.header-left span {
     float: left;
 }
 
@@ -22,4 +22,8 @@
 .sub-title {
     padding: 20px 0px 0px 0px;
     margin: 0px;
+}
+
+.container span {
+    float: left;
 }
