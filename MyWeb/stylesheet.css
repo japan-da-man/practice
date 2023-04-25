@@ -27,3 +27,7 @@
 .container span {
     float: left;
 }
+
+.round {
+    caret-shape: auto;
+}
