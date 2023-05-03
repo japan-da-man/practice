@@ -1,11 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [text, setText] = useState<string>("");
+  const [task, setTask] = useState<string[]>([]);
+
+  const onChangeText = (e: ChangeEvent<HTMLInputElement>) =>
+    setText(e.target.value);
+
+  const onClickAdd = () => {
+
+    const newTask = [...task];
+
+    newTask.push(text);
+    setTask(newTask);
+    setText("");
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
